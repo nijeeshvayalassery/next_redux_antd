@@ -3,9 +3,6 @@ import EditableContext from '../table/editable-context';
 class EditableCell extends React.Component {
     
     getInput = () => {
-      if (this.props.inputType === 'number') {
-        return <InputNumber />;
-      }
       return <Input />;
     };
   
@@ -27,10 +24,15 @@ class EditableCell extends React.Component {
             <Form.Item style={{ margin: 0 }}>
               {getFieldDecorator(dataIndex, {
                 rules: [
-                  {
+                  inputType === 'text' && {
                     required: true,
-                    message: `Please Input ${title}!`,
+                    message: `Required Field.`,
                   },
+                  inputType === 'email' && {
+                    required: true,
+                    type: "email",
+                    message: "Invalid Email."
+                  }
                 ],
                 initialValue: record[dataIndex],
               })(this.getInput())}

@@ -1,8 +1,8 @@
-import { Layout,Table, Divider, Tag} from 'antd';
+import { Layout} from 'antd';
 const {Header,Content,Footer} =  Layout;
 import 'antd/dist/antd.min.css';
 import User from '../components/user/user';
-const Index = props => {
+const Index = () => {
   return (
     <div>
       <link href="css/user.css" rel="stylesheet" />
@@ -16,7 +16,5 @@ const Index = props => {
     </div>
 )
       };
-
-      
 
 export default Index;
