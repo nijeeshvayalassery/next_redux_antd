@@ -1,9 +1,15 @@
-# Basic CRUD using Next js, Redux and Antd.
+## Basic CRUD using Next js, Redux and Antd.
 
 To run the application
 
 Do
 
-npm Install
+npm Install followed by run npm dev
 
-npm run dev
+#### Technologies used
+
+Next Js
+
+Redux
+
+Antd
